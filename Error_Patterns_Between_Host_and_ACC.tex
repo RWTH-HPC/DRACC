@@ -4,15 +4,16 @@
 
 
 
+
 \begin{tabular}{|p{2cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{1cm}|}
 \hline
-\multirow{4}{*}{} & \multicolumn{9}{c|}{\textbf{Between Host and Accelerator}}                                                                                                                                                                                                                                   \\ \cline{2-10} 
-                  & \multicolumn{6}{c|}{Mapping Error}                                                                                                    & \multicolumn{3}{c|}{Concurrency Error}                                                                                                     \\ \cline{2-10} 
-                  & \multicolumn{2}{c|}{Stale Data} & \multicolumn{4}{c|}{Wrong Data Allocation}                                                                   & \multicolumn{1}{c|}{\multirow{2}{2cm}{Atomicity Violation}} & \multicolumn{1}{c|}{\multirow{2}{2cm}{Order Violation}} & \multirow{2}{1cm}{Other} \\ \cline{2-7}
-                  & Missing Data   & Outdated Data  & Missing Data Allocation & Missing Data Deallocation & Failed Data Allocation & Out of Bounds Mapping & \multicolumn{1}{c|}{}                                     & \multicolumn{1}{c|}{}                                 &                        \\ \hline
-OpenMP            & 22, 23, 24, 25 & 26, 27, 32, 33 &                        50 & 49                        & 21                     & 28, 29, 30, 31        & 34                                                        & 35                                                    &                        \\ \hline
-OpenACC           & 9, 10, 11, 12  & 13, 14, 19, 20 &                         37& 34                        & 8                      & 15, 16, 17, 18        &                                                          36 & 35                                                    &                        \\ \hline
-CUDA              & 10, 11, 17         & 12, 13, 18        & 8, 9                    & 14                        & 19                     & 15, 16                &                                                           26& 24, 25                                                    &                        \\ \hline
+\multirow{4}{*}{} & \multicolumn{9}{c|}{Between Host and Accelerator}                                                                                                                                                                                                          \\ \cline{2-10} 
+                  & \multicolumn{6}{c|}{Mapping Error}                                                                                                     & \multicolumn{3}{c|}{Concurrency Error}                                                                            \\ \cline{2-10} 
+                  & \multicolumn{2}{c|}{Stale Data} & \multicolumn{4}{c|}{Wrong Data Allocation}                                                           & \multicolumn{1}{c|}{\multirow{2}{*}{Atomicity Violation}} & \multicolumn{2}{c|}{\multirow{2}{*}{Order Violation}} \\ \cline{2-7}
+                  & Missing Data   & Outdated Data  & Missing Data Allocation & Missing Data Deallocation & Failed Data Allocation & Out of Bounds Mapping & \multicolumn{1}{c|}{}                                     & \multicolumn{2}{c|}{}                                 \\ \hline
+OpenMP            & 22, 23, 24, 25 & 26, 27, 32, 33 & 50                      & 49                        & 21                     & 28, 29, 30, 31        & 34                                                        & \multicolumn{2}{l|}{35}                               \\ \hline
+OpenACC           & 9, 10, 11, 12  & 13, 14, 19, 20 & 37                      & 34                        & 8                      & 15, 16, 17, 18        & 36                                                        & \multicolumn{2}{l|}{35}                               \\ \hline
+CUDA              & 10, 11, 17     & 12, 13, 18     & 8, 9                    & 14                        & 19                     & 15, 16                & 26                                                        & \multicolumn{2}{l|}{24, 25}                           \\ \hline
 \end{tabular}
 
 

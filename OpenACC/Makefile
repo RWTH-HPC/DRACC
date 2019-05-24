@@ -1,14 +1,14 @@
 CC ?= pgcc
-FLAGS = -acc -Minfo=accel
+FLAGS ?= -acc -Minfo=accel
 
 .SUFFIXES: .exe
 
-SRC = $(wildcard *.c)
-EXE = $(SRC:%.c=%.exe)
+SRC = $(wildcard src/*.c)
+EXE = $(SRC:src/%.c=bin/%.exe)
 
 all: $(EXE)
 
-%.exe: %.c
+bin/%.exe: src/%.c
 	$(CC) $(FLAGS) -o $@ $< $(FLAGS_OPENACC)
 	
 clean:

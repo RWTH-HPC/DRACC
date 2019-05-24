@@ -1,15 +1,15 @@
 CC ?= clang
-FLAGS = 
-FLAGS_OPENMP = -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda
+FLAGS ?= 
+FLAGS_OPENMP ?= -fopenmp -fopenmp-targets=nvptx64-nvidia-cuda
 
 .SUFFIXES: .exe
 
-SRC = $(wildcard *.c)
-EXE = $(SRC:%.c=%.exe)
+SRC = $(wildcard src/*.c)
+EXE = $(SRC:src/%.c=bin/%.exe)
 
 all: $(EXE)
 
-%.exe: %.c
+bin/%.exe: src/%.c
 	$(CC) $(FLAGS) -o $@ $< $(FLAGS_OPENMP)
 	
 clean:
