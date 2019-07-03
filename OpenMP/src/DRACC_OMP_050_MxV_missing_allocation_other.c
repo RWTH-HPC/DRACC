@@ -1,5 +1,5 @@
 /*
-Matrix Vector multiplication without allocating the matrix "b" before the kernel starts.
+Matrix Vector multiplication without allocating the result vector "c" before the kernel starts.
 */
 
 
@@ -28,7 +28,7 @@ int init(){
 
 
 int Mult(){
-    #pragma omp target enter data map(to:a[0:C]) map(alloc:c[0:C]) device(0)
+    #pragma omp target enter data map(to:a[0:C]) device(0) //map(alloc:c[0:C])
     #pragma omp target map(to:b[0:C*C]) device(0)
     {
         #pragma omp teams distribute parallel for
@@ -38,7 +38,7 @@ int Mult(){
             }
         }
     }        
-    #pragma omp target exit data map(from:c[0:C]) map(release:a[0:C],b[0:C*C]) device(0)
+    #pragma omp target exit data map(from:c[0:C]) map(release:a[0:C]) device(0)
     return 0;
 }
 
