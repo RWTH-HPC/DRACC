@@ -78,7 +78,7 @@ int main(){
     cudaErrorCheck( cudaDeviceSynchronize());
     
     // Copying the counter variable from the device to the host
-    cudaErrorCheck( cudaMemcpy(countervar,d_count,sizeof(int),cudaMemcpyDeviceToHost));
+    cudaErrorCheck( cudaMemcpy(countervar,d_count,B*T*sizeof(int),cudaMemcpyDeviceToHost));
     
     // Verifying result
     check();
