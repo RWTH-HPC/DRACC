@@ -1,5 +1,5 @@
 /*
-Matrix Vector multiplication without complitly copying back the result c.
+Matrix Vector multiplication without completely copying back the result c.
 */
 
 

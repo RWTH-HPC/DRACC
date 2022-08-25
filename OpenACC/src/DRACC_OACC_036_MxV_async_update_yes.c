@@ -1,5 +1,5 @@
 /*
-Matrix Vector multiplication with an update of a variable during asynchroneous execution of the kernel.
+Matrix Vector multiplication with an update of a variable during asynchronous execution of the kernel.
 */
 
 

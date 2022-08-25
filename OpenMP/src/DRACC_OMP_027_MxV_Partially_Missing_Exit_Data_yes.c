@@ -1,5 +1,5 @@
 /*
-Matrix Vector multiplication without complitly copying back the result c, while utilising the enter data construct.
+Matrix Vector multiplication without completely copying back the result c, while utilising the enter data construct.
 */
 #include <stdio.h>
 #include <stdbool.h>

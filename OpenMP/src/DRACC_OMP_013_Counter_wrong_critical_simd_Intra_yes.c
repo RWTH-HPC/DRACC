@@ -1,7 +1,7 @@
 /*
 Concurrent access on a counter with the wrong lock, by utilising OpenMP critical directives and simd. Atomicity Violation.
-Two locks are used to ensure that addition and substraction cannot be interrupted by them selfes on other teams. 
-Although they are able to interrupt eachother leading to a wrong result. Intra Region.
+Two locks are used to ensure that addition and subtraction cannot be interrupted by themselves on other teams. 
+Although they are able to interrupt each other leading to a wrong result. Intra Region.
 Because of the lockstep, the team size and the mapping of threads on the accelerator this code will not be able to cause a Data Race.
 If the Data Race is induced depends in the implementation of the critical construct on accelerators.
 */

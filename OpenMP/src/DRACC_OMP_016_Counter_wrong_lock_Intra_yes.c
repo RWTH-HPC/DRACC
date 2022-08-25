@@ -1,7 +1,7 @@
 /*
 Concurrent access on a counter with the wrong lock, by utilising OpenMP Lock Routines. Atomicity Violation.
-Two locks are used to ensure that addition and substraction cannot be interrupted by themselfes on other teams. 
-Although they are able to interrupt eachother leading to a wrong result. Intra Region.
+Two locks are used to ensure that addition and subtraction cannot be interrupted by themselves on other teams. 
+Although they are able to interrupt each other leading to a wrong result. Intra Region.
 The combination of lock step and omp_set_lock results in a Deadlock.
 */
 #include <omp.h>

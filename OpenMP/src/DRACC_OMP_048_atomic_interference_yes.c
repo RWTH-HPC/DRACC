@@ -1,5 +1,5 @@
 /*
-Incrementaion with a threshold of N. The incrementation is atomic, but the query on the threshold depends on the counter.
+Incrementation with a threshold of N. The incrementation is atomic, but the query on the threshold depends on the counter.
 The query is not atomic, therefore a Data Race is possible in line 15 to 17.
 */
 #include <stdio.h>
