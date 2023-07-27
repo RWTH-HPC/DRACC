@@ -1,6 +1,6 @@
 /*
 Concurrent access on a counter with the wrong lock, by utilising OpenMP critical directives. Atomicity Violation.
-Two locks are used to ensure that addition and substraction cannot be interrupted by themselfes on other teams. 
+Two locks are used to ensure that addition and subtraction cannot be interrupted by themselves on other teams. 
 Although they are able to interrupt each other leading to a wrong result. Inter and Intra Region.
 */
 #include <omp.h>

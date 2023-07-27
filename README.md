@@ -4,7 +4,7 @@
 
 DataRaceOnAccelerator or short DRACC is a microbenchmark suite designed to test the capabilities of correctness checking tools on detecting memory access issues on systems equipped with hardware accelerators. 
 
-The generation of the executables is Makefile driven. For each individuall test case a short discription can be found withing its source code (Located in 'Programming Model'/src/).
+The generation of the executables is Makefile driven. For each individual test case a short description can be found within its source code (Located in 'Programming Model'/src/).
 The microbenchmark suite is implemented in OpenMP, OpenACC and CUDA.
 
 
@@ -73,13 +73,13 @@ make all
 ```shell
 make runall
 ```
-3. When executing with a correctnes checking tool additional compiler flags might need to be added to the Makefile
+3. When executing with a correctness checking tool additional compiler flags might need to be added to the Makefile
 
   
 ## Coverage 
 
 The following tables provide an overview on the coverage of the individual test cases for the defined error patterns.
-Each number in the table correspondes to the number (see the naming scheme) of the test case implementing the error pattern.
+Each number in the table corresponds to the number (see the naming scheme) of the test case implementing the error pattern.
 
 ![](/Error_Patterns_Between_Host_and_ACC.png)
 
